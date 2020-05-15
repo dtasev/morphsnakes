@@ -50,5 +50,4 @@ deploy:
     - conda install anaconda conda-build
     - conda build ./conda --user $UPLOAD_USER --token $ANACONDA_API_TOKEN
   on:
-    tags: true
     all_branches: true
