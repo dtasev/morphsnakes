@@ -6,4 +6,4 @@ source $MINICONDA_DIR/bin/activate $MINICONDA_DIR
 conda config --set always_yes yes
 conda config --set anaconda_upload yes
 conda install anaconda conda-build
-conda build ./conda --user $UPLOAD_USER --token $ANACONDA_API_TOKEN
+conda build ./conda --py $TRAVIS_PYTHON_VERSION --user $UPLOAD_USER --token $ANACONDA_API_TOKEN
