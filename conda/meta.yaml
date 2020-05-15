@@ -1,0 +1,39 @@
+
+{% set name = 'morphsnakes' %}
+{% set version = '2.0.1' %}
+
+package:
+  name: {{ name | lower }}
+  version: {{ version }}
+
+source:
+  git_url: ../
+
+requirements:
+  build:
+    - python
+  run:
+    - python
+    - numpy
+    - scipy
+
+build:
+  noarch: generic
+  number: 0
+  script:
+    - {{ PYTHON }} -m pip install .
+
+test:
+  imports:
+    - GeodisTK
+
+app:
+  summary: "The Morphological Snakes are a family of methods for image-guided
+    evolution of curves and surfaces represented as a level-set of an embedding
+    function. They have application in several Computer Vision areas,
+    such as image segmentation and tracking."
+
+about:
+  home: https://github.com/pmneila/morphsnakes
+  license: BSD-3
+  license_file: LICENSE
