@@ -11,9 +11,9 @@ source:
 
 requirements:
   build:
-    - python
+    - python {{ python }}
   run:
-    - python
+    - python {{ python }}
     - numpy>=1.11.3
     - scipy>=0.17.0
 
