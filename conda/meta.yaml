@@ -14,8 +14,8 @@ requirements:
     - python
   run:
     - python
-    - numpy
-    - scipy
+    - numpy>=1.11.3
+    - scipy>=0.17.0
 
 build:
   noarch: generic
@@ -25,7 +25,7 @@ build:
 
 test:
   imports:
-    - GeodisTK
+    - morphsnakes
 
 app:
   summary: "The Morphological Snakes are a family of methods for image-guided
