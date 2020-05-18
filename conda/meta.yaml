@@ -20,10 +20,10 @@ requirements:
     - scipy>=0.17.0
 
 build:
-  noarch: generic
+  noarch: python
   number: 0
   script:
-    - {{ PYTHON }} -m pip install .
+    - pip install .
 
 test:
   imports:
