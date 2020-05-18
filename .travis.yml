@@ -4,6 +4,9 @@
 #   http://yaml-online-parser.appspot.com/
 
 # See doc/travis_notes.txt for some guidelines
+os: linux
+dist: bionic
+
 env:
   global:
     - CODACY_PROJECT_TOKEN=e03e55fa447b4f21811a99f63f7e9138
@@ -11,7 +14,6 @@ env:
 
 language: python
 
-sudo: required
 
 python:
   - 3.5
